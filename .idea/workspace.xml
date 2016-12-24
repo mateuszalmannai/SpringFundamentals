@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a74078b-496d-4cc5-9491-23331f49e604" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Coupling Example/lib/hsqldb.jar" afterPath="" />
+    <list default="true" id="3a74078b-496d-4cc5-9491-23331f49e604" name="Default" comment="unversion out">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Coupling Example/src/src/HibernateDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Coupling Example/src/src/InvoiceService.java" afterPath="$PROJECT_DIR$/Coupling Example/src/src/InvoiceService.java" />
     </list>
     <ignored path="SpringFundamentals.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Invoice.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Invoice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Coupling Example/src/src/Invoice.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -57,11 +58,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvoiceService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HibernateDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Coupling Example/src/src/HibernateDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+              <folding>
+                <element signature="e#82#83#0" expanded="true" />
+                <element signature="e#148#149#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InvoiceService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Coupling Example/src/src/InvoiceService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="60">
+              <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -102,6 +116,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -115,9 +136,10 @@
       <list>
         <option value="$PROJECT_DIR$/Coupling Example/src/src/DatabaseUnavailableException.java" />
         <option value="$PROJECT_DIR$/Coupling Example/src/src/Invoice.java" />
-        <option value="$PROJECT_DIR$/Coupling Example/src/src/InvoiceService.java" />
         <option value="$PROJECT_DIR$/Coupling Example/src/src/InvoicingDAO.java" />
         <option value="$PROJECT_DIR$/Coupling Example/src/src/Client.java" />
+        <option value="$PROJECT_DIR$/Coupling Example/src/src/HibernateDAO.java" />
+        <option value="$PROJECT_DIR$/Coupling Example/src/src/InvoiceService.java" />
       </list>
     </option>
   </component>
@@ -691,7 +713,7 @@
       <option name="presentableId" value="Default" />
       <updated>1482582962305</updated>
       <workItem from="1482582967004" duration="766000" />
-      <workItem from="1482588968068" duration="2017000" />
+      <workItem from="1482588968068" duration="2749000" />
     </task>
     <task id="LOCAL-00001" summary="fix merge conflicts">
       <created>1482588992892</created>
@@ -721,11 +743,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482592648361</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="unversion out">
+      <created>1482592739140</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1482592739140</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3325000" />
+    <option name="totallyTimeSpent" value="4057000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -783,7 +812,8 @@
     <MESSAGE value="fix merge conflicts" />
     <MESSAGE value="initial working code" />
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="unversion out" />
+    <option name="LAST_COMMIT_MESSAGE" value="unversion out" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -806,14 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Coupling Example/src/src/InvoiceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -868,6 +890,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coupling Example/src/src/HibernateDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
+          <folding>
+            <element signature="e#82#83#0" expanded="true" />
+            <element signature="e#148#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coupling Example/src/src/InvoiceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
           <folding />
         </state>
       </provider>

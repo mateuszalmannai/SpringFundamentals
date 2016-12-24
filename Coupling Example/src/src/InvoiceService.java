@@ -2,8 +2,11 @@ package src;
 
 public class InvoiceService {
   public void raiseInvoice(Invoice newInvoice) {
-    InvoicingDAO dao = new InvoicingDAO();
+    HibernateDAO dao = new HibernateDAO();
     dao.save(newInvoice);
+
+    // apply some logic to the inovice
+
   }
 
 }
