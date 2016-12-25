@@ -19,9 +19,9 @@ public class BookDaoHorridJdbcImpl implements BookDao {
   private static final String USERNAME = "sa";
 
   // SQL
-  private static final String INSERT_BOOK_SQL = "insert into BOOK (ISBN, TITLE, AUTHOR,PRICE) values (?, ?, ?, ?) ";
-  private static final String CREATE_TABLE_SQL = "create table BOOK(ISBN VARCHAR(20), TITLE VARCHAR(50), AUTHOR VARCHAR(50), PRICE DOUBLE)";
-  private static final String GET_ALL_BOOKS_SQL = "select * from BOOK";
+  private static final String INSERT_BOOK_SQL = "INSERT INTO BOOK (ISBN, TITLE, AUTHOR,PRICE) VALUES (?, ?, ?, ?) ";
+  private static final String CREATE_TABLE_SQL = "CREATE TABLE BOOK(ISBN VARCHAR(20), TITLE VARCHAR(50), AUTHOR VARCHAR(50), PRICE DOUBLE)";
+  private static final String GET_ALL_BOOKS_SQL = "SELECT * FROM BOOK";
 
   // Driver and Database URL
   private static final String DRIVER_NAME = "org.hsqldb.jdbcDriver";
