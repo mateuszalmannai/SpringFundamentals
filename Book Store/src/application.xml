@@ -1,8 +1,13 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"  "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 <beans>
-  <bean id="bookService" class="com.virtualpairprogrammers.avalon.services.BookServiceMockImpl">
-    <!-- mocks don't need any data to run -->
+  <bean id="bookService"
+        class="com.virtualpairprogrammers.avalon.services.BookServiceMockImpl"/>
+  <bean id="accountsService"
+        class="com.virtualpairprogrammers.avalon.services.AccountsServiceMockImpl"/>
+  <bean id="purchasingService"
+        class="com.virtualpairprogrammers.avalon.services.PurchasingServiceImpl">
+    <constructor-arg ref="bookService"/>
+    <constructor-arg ref="accountsService"/>
   </bean>
-
 </beans>
 
