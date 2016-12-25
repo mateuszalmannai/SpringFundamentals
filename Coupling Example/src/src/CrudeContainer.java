@@ -9,7 +9,7 @@ public class CrudeContainer {
   public static InvoiceService getInvoiceService() {
 
     // set-up the Data Access Object
-//    InvoicingDAO dao = new HibernateDAO();
+//    InvoicingDAO data = new HibernateDAO();
     InvoicingDAO dao = new InvoicingDAOJdbcImplementation();
 
 
