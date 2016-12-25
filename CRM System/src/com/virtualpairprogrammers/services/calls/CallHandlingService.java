@@ -7,7 +7,6 @@ import com.virtualpairprogrammers.domain.Call;
 import com.virtualpairprogrammers.services.customers.CustomerNotFoundException;
 
 public interface CallHandlingService {
-  // DO NOT IMPLEMENT THIS INTERFACE UNTIL A LATER CHAPTER!
 
   /**
    * Records a call with the customer management service, and also records

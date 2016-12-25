@@ -9,4 +9,8 @@
   <bean id="CustomerManagementService"
         class="com.virtualpairprogrammers.services.customers.CustomerManagementServiceMockImpl"/>
 
+	<bean id="CallHandlingService" class="com.virtualpairprogrammers.services.calls.CallHandlingServiceImpl">
+    <constructor-arg ref="CustomerManagementService"/>
+    <constructor-arg ref="DiaryManagementService"/>
+  </bean>
 </beans>
