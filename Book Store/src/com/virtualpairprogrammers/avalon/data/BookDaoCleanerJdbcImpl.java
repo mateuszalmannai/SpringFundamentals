@@ -25,12 +25,15 @@ public class BookDaoCleanerJdbcImpl implements BookDao {
   public BookDaoCleanerJdbcImpl(JdbcTemplate jdbcTemplate) {
     this.jdbcTemplate = jdbcTemplate;
 
-    // TODO: improve this tryt block
+  }
+
+  private void createTables() {
     try {
       jdbcTemplate.update(CREATE_TABLE_SQL);
     } catch (DataAccessException e) {
       System.err.println("Assuming that the table already exists.");
     }
+
   }
 
   @Override

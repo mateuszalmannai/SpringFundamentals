@@ -2,8 +2,8 @@
 <beans>
 
   <!-- Datasources -->
-  <bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
-    <property name="driverClass" value="org.hsqldb.jdbcDriver"/>
+  <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+    <property name="driverClassName" value="org.hsqldb.jdbcDriver"/>
     <property name="url" value="jdbc:hsqldb:file:databse.dat;shutdown=true"/>
     <property name="username" value="sa"/>
     <property name="password" value=""/>
@@ -16,7 +16,7 @@
 
 
   <!-- DAO Beans -->
-  <bean id="bookDao" class="com.virtualpairprogrammers.avalon.data.BookDaoCleanerJdbcImpl">
+  <bean id="bookDao" class="com.virtualpairprogrammers.avalon.data.BookDaoCleanerJdbcImpl" init-method="createTables">
     <constructor-arg ref="jdbcTemplate"/>
   </bean>
 
