@@ -19,8 +19,24 @@ public class CrmClient {
 
     final ClassPathXmlApplicationContext container = new ClassPathXmlApplicationContext("application.xml");
 
+    final CustomerManagementService customerManagementService = container.getBean(CustomerManagementService.class);
     final CallHandlingService callHandlingService = container.getBean(CallHandlingService.class);
     final DiaryManagementService diaryManagementService = container.getBean(DiaryManagementService.class);
+
+
+//    final Customer newCustomer = new Customer("CS03939", "Acme", "Good Company");
+//    customerManagementService.newCustomer(newCustomer);
+
+    final String customerId = "CS03939";
+    Customer foundCustomer = getCustomer(customerManagementService, customerId);
+    foundCustomer.setTelephone("6323003");
+    foundCustomer.setEmail("larry@acme.com");
+    try {
+      customerManagementService.updateCustomer(foundCustomer);
+      customerManagementService.deleteCustomer(foundCustomer);
+    } catch (CustomerNotFoundException e) {
+      System.err.println("Sorry, that customer couldn't be found.");
+    }
 
     final Call newCall = new Call("Larry Wall called from Acme Corp");
     final String requiredUser = "rac";
@@ -31,7 +47,6 @@ public class CrmClient {
     actions.add(action1);
     actions.add(action2);
 
-    final String customerId = "CS03939";
     try {
       callHandlingService.recordCall(customerId, newCall, actions);
     } catch (CustomerNotFoundException e) {
@@ -45,5 +60,15 @@ public class CrmClient {
     }
 
     container.close();
+  }
+
+  private static Customer getCustomer(CustomerManagementService customerManagementService, String customerId) {
+    Customer foundCustomer = null;
+    try {
+      foundCustomer = customerManagementService.findCustomerById(customerId);
+    } catch (CustomerNotFoundException e) {
+      System.err.println("Customer with id: " + customerId + " doesn't exist.");
+    }
+    return foundCustomer;
   }
 }
