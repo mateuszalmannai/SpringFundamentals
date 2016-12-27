@@ -1,5 +1,6 @@
 package com.virtualpairprogrammers.avalon.client;
 
+import com.virtualpairprogrammers.avalon.data.BookNotFoundException;
 import com.virtualpairprogrammers.avalon.domain.Book;
 import com.virtualpairprogrammers.avalon.services.BookService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -20,6 +21,13 @@ public class BookServiceClient {
     for (Book book : allBooks) {
       System.out.println(book);
     }
+
+    try {
+      final Book foundBook = bookService.getBookByIsbn("fdakadlkjlkqoiulkjlkj");
+    } catch (BookNotFoundException e) {
+      System.err.println("Sorry, that book doesn't exist.");
+    }
+
 
     container.close();
   }

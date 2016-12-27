@@ -2,6 +2,8 @@ package com.virtualpairprogrammers.avalon.data;
 
 import com.virtualpairprogrammers.avalon.domain.Book;
 import org.springframework.dao.DataAccessException;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -30,7 +32,7 @@ public class BookDaoCleanerJdbcImpl implements BookDao {
   private void createTables() {
     try {
       jdbcTemplate.update(CREATE_TABLE_SQL);
-    } catch (DataAccessException e) {
+    } catch (BadSqlGrammarException e) {
       System.err.println("Assuming that the table already exists.");
     }
 
@@ -43,13 +45,17 @@ public class BookDaoCleanerJdbcImpl implements BookDao {
   }
 
   @Override
-  public Book findByIsbn(String isbn) {
-    return jdbcTemplate.queryForObject(BOOKS_BY_ISBN_SQL, new BookMapper(), isbn);
+  public Book findByIsbn(String isbn) throws BookNotFoundException {
+    try {
+      return jdbcTemplate.queryForObject(BOOKS_BY_ISBN_SQL, new BookMapper(), isbn);
+    } catch (EmptyResultDataAccessException e) {
+      throw new BookNotFoundException();
+    }
   }
 
   @Override
   public void create(Book newBook) {
-    // use varargs instead of Object[]
+    // using varargs instead of Object[]
     jdbcTemplate.update(INSERT_BOOK_SQL,
       newBook.getIsbn(),
       newBook.getTitle(),

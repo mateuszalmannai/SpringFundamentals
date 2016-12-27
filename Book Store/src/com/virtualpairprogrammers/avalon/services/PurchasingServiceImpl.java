@@ -1,5 +1,6 @@
 package com.virtualpairprogrammers.avalon.services;
 
+import com.virtualpairprogrammers.avalon.data.BookNotFoundException;
 import com.virtualpairprogrammers.avalon.domain.Book;
 
 /**
@@ -17,7 +18,7 @@ public class PurchasingServiceImpl implements PurchasingService{
   }
 
   @Override
-  public void buyBook(String isbn) {
+  public void buyBook(String isbn) throws BookNotFoundException {
 
     // find the correct book
     final Book requiredBook = bookService.getBookByIsbn(isbn);

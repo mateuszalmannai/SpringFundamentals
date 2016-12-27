@@ -7,7 +7,7 @@ import java.util.List;
 public interface BookDao {
   List<Book> allBooks();
 
-  Book findByIsbn(String isbn);
+  Book findByIsbn(String isbn) throws BookNotFoundException;
 
   void create(Book newBook);
 

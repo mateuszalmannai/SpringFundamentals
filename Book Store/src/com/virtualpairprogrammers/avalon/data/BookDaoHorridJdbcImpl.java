@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * An implementation of the BookDAO using the horrid JDBC library directly.
  *
- * NOT PRODUCTION STANDARD! As we're going to imporve this with Spring, we've
+ * NOT PRODUCTION STANDARD! As we're going to improve this with Spring, we've
  * taken many liberties with the coding.
  */
 public class BookDaoHorridJdbcImpl implements BookDao {
